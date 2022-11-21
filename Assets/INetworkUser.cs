@@ -1,4 +1,7 @@
-﻿internal interface INetworkUser
+﻿using Unity.Netcode;
+
+internal interface INetworkUser
 {
-    void OnSpawn(ulong ownerId);
+    [ClientRpc]
+    void OnSpawnClientRpc(ulong ownerId);
 }

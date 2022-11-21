@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 2763013832791439451}
   - component: {fileID: 2763013832791439454}
   - component: {fileID: 2763013832791439455}
-  - component: {fileID: 2763013832791439440}
   - component: {fileID: 4219093948303148976}
   m_Layer: 0
   m_Name: PCPlayer
@@ -179,33 +178,6 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &2763013832791439440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2763013832791439441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.005
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  InLocalSpace: 0
-  Interpolate: 1
-  CanCommitToTransform: 0
 --- !u!114 &4219093948303148976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,18 +229,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2763013833016352845}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 6664959422740491186}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -281,6 +241,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
+  CanCommitToTransform: 0
+  camTransform: {fileID: 2763013833016352846}
 --- !u!1 &2763013833016352847
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +257,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2763013833016352846}
   - component: {fileID: 2763013833016352844}
-  - component: {fileID: 2763013833016352845}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -357,14 +322,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2763013833016352845
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2763013833016352847}
-  m_Enabled: 0
 --- !u!1 &5824181041780306989
 GameObject:
   m_ObjectHideFlags: 0
